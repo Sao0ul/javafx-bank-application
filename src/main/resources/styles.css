@@ -1,0 +1,247 @@
+
+.my-button {
+    -fx-pref-width: 200;
+    -fx-pref-height: 100;
+    -fx-background-color: linear-gradient(to bottom, #f0f0f0, #d6d6d6); /* haut clair, bas plus sombre */
+    -fx-background-radius: 6;
+    -fx-padding: 8 20 8 20;
+    -fx-text-fill: #333;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    /* Ombre externe pour donner du relief */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 3, 0, 2, 2);
+
+    /* Petite bordure foncée */
+    -fx-border-color: #b5b5b5;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+
+    /* Curseur main */
+    -fx-cursor: hand;
+}
+
+.my-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #cccccc);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 4, 0, 3, 3);
+}
+
+
+.my-button:pressed {
+    /* inverser l'ombre pour donner impression d'appui */
+    -fx-background-color: linear-gradient(to bottom, #cccccc, #f0f0f0);
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 4, 0, 2, 2);
+
+    /* déplacer légèrement */
+    -fx-translate-y: 2;
+}
+
+
+.ViewClassButton{
+    -fx-pref-width: 100;
+    -fx-pref-height: 50;
+    -fx-font-size: 15px;
+}
+
+.ViewClassLabel{
+    -fx-font-size: 18px;
+}
+
+
+.errorViewLabel{
+    -fx-font-size: 18px;
+    -fx-background-image: url("/images/warning.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+
+    -fx-pref-width: 600;
+    -fx-pref-height: 400;
+
+    -fx-background-size: 80% 80%;
+    -fx-alignment: bottom-center; /* Texte centré en bas */
+}
+.noErrorViewLabel{
+    -fx-font-size: 18px;
+    -fx-background-image: url("/images/success.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+
+    -fx-pref-width: 600;
+    -fx-pref-height: 400;
+
+    -fx-background-size: 80% 80%;
+    -fx-alignment: bottom-center; /* Texte centré en bas */
+}
+
+.lbel{
+    -fx-background-image: url("/images/bank.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: top center; /* Image en haut centrée */
+    -fx-background-size: 50% 100%; /* largeur et hauteur du Label */
+    -fx-alignment: bottom-center; /* Texte centré en bas */
+    /*-fx-padding: 20 0 40 0; Espace pour que le texte ne colle pas au bord */
+    -fx-font-size: 16px;
+
+    -fx-pref-width: 600;
+    -fx-pref-height: 450;
+
+    -fx-font-family: "Times New Roman", serif;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c2c2c;
+
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 4, 0.5, 0, 2);
+
+
+}
+
+
+.retourButton{
+    -fx-background-image: url("/images/back.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+    -fx-background-size: 50% 50%;
+    -fx-pref-width: 200;
+    -fx-pref-height:80;
+    -fx-alignment: bottom-center;/*texte centre en bas*/
+
+    -fx-background-color: linear-gradient(to bottom, #d9534f, #c9302c);
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 20 8 20;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 3, 0, 2, 2);
+    -fx-border-color: #ac2925;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+}
+
+.retourButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #e27571, #d9534f);
+}
+
+.retourButton:pressed {
+    -fx-background-color: linear-gradient(to bottom, #c9302c, #d9534f);
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 4, 0, 2, 2);
+}
+
+
+
+
+/*valider button style*/
+
+.validerButton {
+    -fx-background-image: url("/images/check-mark.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 60%; /* image centrée un peu plus bas */
+    -fx-background-size: 50% 30%;
+    -fx-pref-width: 200;
+    -fx-pref-height:70;
+
+    -fx-alignment: bottom-center; /* texte centré en bas */
+    -fx-background-color: linear-gradient(to bottom, #5cb85c, #4cae4c);
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 20 8 20;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    /* Effet 3D */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 3, 0, 2, 2);
+    -fx-border-color: #3e8e41;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+
+    /* Transition fluide */
+    -fx-transition: all 0.25s ease-in-out; /* ce n’est pas officiel JavaFX mais ScenicView supporte */
+}
+.retourButton {
+    -fx-background-image: url("/images/back.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 60%; /* image centrée un peu plus bas */
+    -fx-background-size: 50% 30%;
+    -fx-pref-width: 200;
+    -fx-pref-height:70;
+
+    -fx-alignment: bottom-center; /* texte centré en bas */
+    -fx-background-color: linear-gradient(to bottom, #e14343, #fc0909);
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 8 20 8 20;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    /* Effet 3D */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 3, 0, 2, 2);
+    -fx-border-color: #3e8e41;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+
+    /* Transition fluide */
+    -fx-transition: all 0.25s ease-in-out; /* ce n’est pas officiel JavaFX mais ScenicView supporte */
+}
+
+/* Au survol : l’image grossit et monte */
+.validerButton:hover,.retourButton:hover {
+    -fx-background-color: linear-gradient(to bottom, #6fdc6f, #5cb85c);
+    -fx-background-size: 60% 40%; /* agrandit l’image */
+    -fx-background-position: center 40%; /* monte l’image */
+    -fx-padding: 12 20 4 20; /* décale un peu le texte vers le bas */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 6, 0, 3, 3);
+}
+
+/* Enfoncé : effet touche clavier */
+.validerButton:pressed,.retourButton:pressed {
+    -fx-background-color: linear-gradient(to bottom, #4cae4c, #5cb85c);
+    -fx-background-size: 55% 35%; /* léger recul */
+    -fx-background-position: center 50%;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 4, 0, 2, 2);
+    -fx-padding: 10 20 6 20; /* simule l’enfoncement */
+}
+
+
+
+
+
+
+.comprisErrorButton{
+    -fx-background-image: url("/images/compris.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+
+    -fx-background-size: 40% 70%;
+
+    -fx-pref-width: 250;
+    -fx-pref-height:80;
+
+    -fx-alignment: bottom-center;/*texte centre en bas*/
+}
+.comprisNoErrorButton{
+    -fx-background-image: url("/images/successButton.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+
+    -fx-background-size: 60% 100%; /* largeur et hauteur du Label */
+
+    -fx-pref-width: 250;
+    -fx-pref-height:80;
+
+    -fx-alignment: bottom-center;/*texte centre en bas*/
+}
+
+.mainSceneCss{
+    -fx-background-image: url("/images/backgroundMainScene.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover;
+}
